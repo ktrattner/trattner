@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Super‑Simple Site</title>
+  <meta name="description" content="A dead‑simple static site deployed on GitHub Pages." />
+  <meta property="og:title" content="My Super‑Simple Site" />
+  <meta property="og:description" content="A dead‑simple static site deployed on GitHub Pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root { --max: 70ch; }
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #111; background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e6e6; background: #111; }
+      a { color: #7cc0ff; }
+    }
+    header, main, footer { display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 3rem 1rem; }
+    header .wrap { padding-bottom: 1rem; }
+    h1 { font-size: clamp(2rem, 3vw + 1rem, 3rem); line-height: 1.1; margin: 0 0 0.5rem; }
+    p { margin: 0.8rem 0; }
+    a { color: #0a58ca; text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    .card {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: rgba(0,0,0,0.05); padding: 0.15em 0.35em; border-radius: 6px; }
+    footer { border-top: 1px solid rgba(0,0,0,0.08); }
+    .muted { opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>👋 Hello, world.</h1>
+      <p class="muted">This is a tiny static site. Edit <code>index.html</code> in your repo and push to update.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="card">
+        <h2>About</h2>
+        <p>Built with plain HTML + CSS, hosted on GitHub Pages. No frameworks, no build step.</p>
+      </section>
+
+      <section class="card">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:hello@example.com">Email me</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>How to edit</h2>
+        <ol>
+          <li>Edit this file and commit your changes.</li>
+          <li>Push to <code>main</code>. GitHub Pages will auto‑publish.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="muted">© <span id="y"></span> Your Name</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer (optional; remove if you want zero JS)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
